@@ -3,11 +3,10 @@
 <title>Hello World!</title>
 </head>
 <body>
-	<h1>Hello World!</h1>
+	<h1>personal info!</h1>
 	<p>
-		It is now
-		<%= new java.util.Date() %></p>
+		Hi , ii am pooja.I work at amazon.I love reading books
 	<p>
 		You are coming from 
-		<%= request.getRemoteAddr()  %></p>
+		i am learning devops
 </body>
