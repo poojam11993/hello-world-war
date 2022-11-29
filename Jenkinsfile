@@ -1,5 +1,5 @@
 pipeline {
- agent {label 'master'}
+ agent {label 'slave2'}
  stages {
   stage  ('build') {
    steps {
@@ -8,7 +8,7 @@ pipeline {
    }
  }
   stage ('deploy') {
-   agent {label 'slave2'}
+   agent {label 'master'}
     steps {
      sh 'sudo cp -R target/hello-world-war-1.0.0.war /opt/tomcat-10.0.27/webapps/'
      sh 'sudo sh /opt/apache-tomcat-10.0.27/bin/shutdown.sh'
