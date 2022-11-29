@@ -5,7 +5,7 @@
 <body>
 	<h1>personal info!</h1>
 	<p>
-		Hi , i am pooja.I work at amazon.I love reading books
+		Hi , i am pooja.I work at amazon.
 	<p>
-		i am learning devops and jenkins
+		this is declarative pipeline
 </body>
