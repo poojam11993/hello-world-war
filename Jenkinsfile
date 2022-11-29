@@ -1,7 +1,7 @@
 pipeline {
  agent {label 'master'}
  stages {
-  stage {'build'} {
+  stage  { 'build' } {
    steps {
     sh 'mvn package'
     sh 'ls'
