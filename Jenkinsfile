@@ -5,6 +5,7 @@ pipeline {
       steps {
         sh 'mvn package'  
         sh 'chmod 777 target'
+        pwd
         sh 'scp -r target/hello-world-war-1.0.0.war root@172.31.0.129:/opt/apache-tomcat-10.0.27/webapps/'
       }
     }
