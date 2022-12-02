@@ -3,6 +3,7 @@ pipeline {
   stages {
     stage ('my build') {
       steps {
+        sh "echo ${BUILD_NUMBER}"
         sh 'mvn package'  
         sh 'chmod 777 target'
         sh 'pwd'
