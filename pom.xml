@@ -3,7 +3,7 @@
 	<modelVersion>4.0.0</modelVersion>
 	<groupId>com.efsavage</groupId>
 	<artifactId>hello-world-war</artifactId>
-	<version>1.0.0</version>
+	<version>${BUILD_NUMBER}</version>
 	<packaging>war</packaging>
 	<name>Hello World Web Application Repository</name>
 	<description>Simplest possible Java Webapp</description>
@@ -25,5 +25,12 @@
 			</plugin>
 		</plugins>
 	</build>
+	<distributionManagement>
+                                <repository>
+                                            <id>central</id>
+                                            <name>a0lt5qcfbq5w2-artifactory-primary-0-releases</name>
+                                            <url>https://pooja123.jfrog.io/artifactory/libs-release</url>
+                                </repository>
+        </distributionManagement>
 
 </project>
