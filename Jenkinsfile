@@ -9,7 +9,7 @@ pipeline {
       }
     }
 stage ('my deploy') {
-   agent {label 'master'}
+   agent {label 'jenkins'}
    steps {
         sh 'curl -u puja.manohar1993@gmail.com:Saanvi@26 -O https://pooja123.jfrog.io/ui/repos/tree/General/libs-release-local/com/efsavage/hello-world-war/${BUILD_NUMBER}/hello-world-war-${BUILD_NUMBER}.war'
         sh 'sudo cp -R hello-world-war-${BUILD_NUMBER}.war /opt/tomcat/webapps/'
