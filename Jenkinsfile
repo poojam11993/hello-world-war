@@ -15,7 +15,7 @@ pipeline {
             }
         } 
         stage( 'my deploy' ) {
-        agent {label 'master'} 
+        agent {label 'test'} 
             steps {
                sh 'docker pull  puja15/mytomcat:${BUILD_NUMBER}'
                sh 'docker rm -f mytomcat'
