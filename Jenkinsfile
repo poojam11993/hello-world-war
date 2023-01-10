@@ -3,7 +3,7 @@ pipeline {
     stages {
         stage('my Build') {
             steps {
-                sh 'docker build -t tomcat_build:${BUILD_NUMBER} .' 
+                sh 'docker build -t mytomcat:${BUILD_NUMBER} .' 
             }
         }  
         stage('publish stage') {
@@ -11,7 +11,7 @@ pipeline {
                 sh "echo ${BUILD_NUMBER}"
                 withCredentials([usernamePassword(credentialsId: 'Dockerhub', passwordVariable: 'DockerhubPassword', usernameVariable: 'DockerhubUser')]) {
                 sh "docker login -u ${env.DockerhubUser} -p ${env.DockerhubPassword}"
-                sh 'docker tag tomcat_build:${BUILD_VERSION} puja15/mytomcat:${BUILD_VERSION}'
+                sh 'docker tag mytomcat:${BUILD_VERSION} puja15/mytomcat:${BUILD_VERSION}'
                 sh 'docker push puja15/mytomcat:${BUILD_VERSION}'
                 }    
             }
