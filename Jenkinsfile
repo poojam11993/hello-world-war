@@ -11,8 +11,8 @@ pipeline {
                 sh "echo ${BUILD_NUMBER}"
                 withCredentials([usernamePassword(credentialsId: 'Dockerhub', passwordVariable: 'DockerhubPassword', usernameVariable: 'DockerhubUser')]) {
                 sh "docker login -u ${env.DockerhubUser} -p ${env.DockerhubPassword}"
-                sh 'docker tag tomcat_build:${BUILD_VERSION} puja15/mytomcat:${BUILD_VERSION}'
-                sh 'docker push puja15/mytomcat:${BUILD_VERSION}'
+                sh 'docker tag tomcat_build:${BUILD_NUMBER} puja15/mytomcat:${BUILD_NUMBER}'
+                sh 'docker push puja15/mytomcat:${BUILD_NUMBER}'
                 }    
             }
         }
